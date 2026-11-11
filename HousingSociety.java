@@ -26,7 +26,10 @@ public void removeBlock(Block block){
 }
 
 public void displaySocietyDetails(){
-
+	System.out.println("Society Id: " + societyId);
+	System.out.println("Society Name: " + societyName);
+	System.out.println("Location: " + location);
+	System.out.println("Total Area: " + totalArea);
 
 }
 
