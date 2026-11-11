@@ -1,10 +1,11 @@
 public class CommercialCentre extends Plot{
 
+	private int centreId;
 	private String centreName;
-	private String location;
+	private String description;
 	private int totalFloors;
 
-	public CommercialCentre(int plotNumber, double area, double price, String centreName , String location , int totalFloors){
+	public CommercialCentre(int plotNumber, int plotId, double area, double price, String centreName , String location , int totalFloors){
 			super(plotNumber, area, price);
 			this.centreName = centreName;
 			this.location = location;
