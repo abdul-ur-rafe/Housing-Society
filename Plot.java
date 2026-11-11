@@ -28,7 +28,9 @@ public abstract class Plot{
 		System.out.println("Owner: " + owner);
 	}
 
-	public double calculateArea();
+	public double calculateArea(){
+			return area;
+	}
 
 	public void updateStatus(PlotStatus status){
 		this.status = status;
