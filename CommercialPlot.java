@@ -1,6 +1,6 @@
 public class CommercialPlot extends Plot{
-    private String businessType;
-    private String commercialCategory;
+	private BusinessType businessType;
+	private String commercialCategory;
 
 
 
@@ -23,8 +23,8 @@ public class CommercialPlot extends Plot{
     public void setCommercialCategory(String commercialCategory) {
         this.commercialCategory = commercialCategory;
     }
-    public void registerBusiness(String businessType) {
-        setBusinessType(businessType);
+	public void registerBusiness(BusinessType businessType) {
+    	this.businessType = businessType;
         System.out.println("Business registered successfully: " + businessType);
     }
 
