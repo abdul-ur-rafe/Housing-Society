@@ -13,7 +13,7 @@ public abstract class Plot{
 	}
 	
 	public void displayPlotDetails(){
-		
+		System.out.prin
 
 	}
 
