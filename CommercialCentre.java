@@ -5,25 +5,26 @@ public class CommercialCentre extends Plot{
 	private String description;
 	private int totalFloors;
 
-	public CommercialCentre(int plotNumber, int plotId, double area, double price, String centreName , String location , int totalFloors){
-			super(plotNumber, area, price);
+	public CommercialCentre(int plotNumber, int plotId, double area, double price, Plotshape shape, Owner owner, PlotStatus status, int centreId, String centreName , String description , int totalFloors){
+			super(plotNumber, plotId, area, price, shape, owner, status);
 			this.centreName = centreName;
-			this.location = location;
+			this.centreId = centreId;		
+			this.description = description;
 			this.totalFloors = totalFloors;
 		
 	}
 	
-	public void displayPlotDetails(){
+	public void addShop(CommercialUnit shop){
 		
 
 	}
 
-	public double calculatePrice(){
+	public void removeShop(int shopId){
 		
 
 	}
 
-	public void updateAvailablity(){
+	public void displayCentreDetails(){
 		
 
 	}
