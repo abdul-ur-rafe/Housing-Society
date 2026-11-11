@@ -13,18 +13,15 @@ public abstract class Plot{
 	}
 	
 	public void displayPlotDetails(){
-		System.out.prin
-
-	}
-
-	public double calculatePrice(){
-		
-
+		System.out.println("Plot Number: " + plotNumber);
+		System.out.println("Area: " + area);
+		System.out.println("Price: " + price);
+		System.out.println("Availability: " + isAvailable);
 	}
 
 	public void updateAvailablity(){
-		
-
+		if(isAvailable == false) {isAvailable = true;}
+		else {isAvailable = false;}
 	}
 	
 
