@@ -9,6 +9,7 @@ public abstract class Plot{
 		this.plotNumber = plotNumber;
 		this.area = area;
 		this.price = price;
+		isAvailable = false;
 	}
 	
 	public void displayPlotDetails(){
