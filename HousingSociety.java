@@ -1,26 +1,24 @@
 public class HousingSociety{
+	private int societyId;
 	private String societyName;
 	private String location;
-	private Block block;
+	private double totalArea;
+	private Block blocks [];
+	private int count;
 
-public HousingSociety(String societyName, String location){
+public HousingSociety(int societyId, String societyName, String location , double totalArea){
+	this.societyId = societyId;
 	this.societyName = societyame;
 	this.location = location;
-	block=new Block[4];
+	this.totalArea = totalArea;
 }
 
 public void addBlock(Block block){
-
-	for(int i =0; i<= block.length; i++)
-		if (block[i]==null){
-		block[i]= block;
-}
-
+		blocks[count++] = block;
 }
 
 public void removeBlock(Block block){
-
-for(int i =0; i<=block.length; i++)
+	for(int i =0; i<=count; i++)
 		if (block[i]==block){
 		block[i]= null;
 }
@@ -29,9 +27,6 @@ for(int i =0; i<=block.length; i++)
 
 public void displaySocietyDetails(){
 
-for(int i =0; i<= block.length; i++)
-	
-System.out.println(block[i]);
 
 }
 
