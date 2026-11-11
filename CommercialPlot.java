@@ -23,7 +23,10 @@ public class CommercialPlot extends Plot{
     public void setCommercialCategory(String commercialCategory) {
         this.commercialCategory = commercialCategory;
     }
-
+    public void registerBusiness(String businessType) {
+        setBusinessType(businessType);
+        System.out.println("Business registered successfully: " + businessType);
+    }
 
     public String getCommercialDetails() {
         return "Commercial Plot\n" +
