@@ -1,27 +1,37 @@
 public abstract class Plot{
 
 	private int plotNumber;
+	private int plotId;
 	private double area;
 	private double price;
-	private boolean isAvailable;
+	private PlotStatus status;
+	private PlotShape shape;
+	private Owner owner;
 
-	public Plot(int plotNumber, double area, double price){
+	public Plot(int plotNumber, int plotId, double area, double price, Plotshape shape, Owner owner, PlotStatus status){
 		this.plotNumber = plotNumber;
+		this.plotId = plotId;
 		this.area = area;
 		this.price = price;
-		isAvailable = false;
+		this.shape = shape;
+		this.owner = owner;
+		this.status = status;
 	}
 	
-	public void displayPlotDetails(){
+	public void getPlotDetails(){
+		System.out.println("Plot ID: " + plotId);
 		System.out.println("Plot Number: " + plotNumber);
 		System.out.println("Area: " + area);
 		System.out.println("Price: " + price);
-		System.out.println("Availability: " + isAvailable);
+		System.out.println("Shape: " + shape);
+		System.out.println("Status: " + status);
+		System.out.println("Owner: " + owner);
 	}
 
-	public void updateAvailablity(){
-		if(isAvailable == false) {isAvailable = true;}
-		else {isAvailable = false;}
+	public double calculateArea();
+
+	public void updateStatus(PlotStatus status){
+		this.status = status;
 	}
 	
 
