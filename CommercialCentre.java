@@ -25,8 +25,11 @@ public class CommercialCentre extends Plot{
 	}
 
 	public void displayCentreDetails(){
-		
-
+		super().getPlotDetails();
+		System.out.println("Centre ID: " + centreId);
+		System.out.println("Centre Name: " + centreName);
+		System.out.println("Total FLoors: " + totalFloors);
+		System.out.println("Description: " + description);
 	}
 	
 
