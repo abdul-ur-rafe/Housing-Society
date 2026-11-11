@@ -1,13 +1,13 @@
 public class ResidentialPlot extends Plot{
     private int permittedFloors;
-    private String constructionStatus;
+	private ConstructionStatus constructionStatus;
     private boolean houseBuilt;
 	
 	public ResidentialPlot(int plot,double area ,double price,int permittedFloors){
 		super(plot ,area , price);
 		this.permittedFloors=permittedFloors;
 		this.bedrooms=bedrooms;
-        this.constructionStatus = "NOT_STARTED";
+		this.constructionStatus = ConstructionStatus.NOT_STARTED;
         this.houseBuilt = false;
 	}
     public int getPermittedFloors() { return permittedFloors; }
@@ -18,15 +18,11 @@ public class ResidentialPlot extends Plot{
     public void setPermittedFloors(int permittedFloors) {
         this.permittedFloors = permittedFloors;
     }
-	public boolean setConstStatus(){
-		constructionStatus=true;
-		}
+	public void updateConstructionStatus(ConstructionStatus status) {
+    	this.constructionStatus = status;
+		this.houseBuilt = status.equals("COMPLETED");
+	}
 	
-    public void updateConstructionStatus(String status) {
-        this.constructionStatus = status;
-        this.houseBuilt = status.equals("COMPLETED");
-    }
-
     public String getResidentialDetails() {
         return "Residential Plot\n" +
                "Plot Number: " + getPlotNumber() + "\n" +
