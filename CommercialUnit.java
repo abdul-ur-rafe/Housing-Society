@@ -17,17 +17,33 @@ this.isAvailable=isAvailable;
 	
 public void rentUnit(){
 
+	if(isAvailable){
 
+	System.out.println("Unit is rented.");
+	isAvailable=false;
+	}
+	else{
+	
+	System.out.println("Unit is already rented");
+	}
 
 	}
 public void releaseUnit(){
 
+	if(!isAvailable){
 
+	System.out.println("unit is released");
+	isAvailable=true;
+	
+	}
+	else{
+	System.out.println("unit is already available");
+	}
 
 	}
 public void displayUnitDetails(){
 
-
+	System.out.println("Shop id: "+shopId+"\nShop Number: "+shopNumber+"\nArea: "+area+"\nRent: "+rent+"\nAvailability: "+isAvailable);
 	
 	
 	}
