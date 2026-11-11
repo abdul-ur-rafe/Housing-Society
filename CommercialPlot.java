@@ -11,11 +11,13 @@ public class CommercialPlot extends Plot{
 		}
 
 
-	public void displayCommDet(){
-		System.out.println("BusinessType: "+businessType+"\nCommercial Categories: "+commercialCategories);
 
-
-		}
-
+    public String getCommercialDetails() {
+        return "Commercial Plot\n" +
+               "Plot Number: " + getPlotNumber() + "\n" +
+               "Area: " + calculateArea() + " sq ft\n" +
+               "Business Type: " + businessType + "\n" +
+               "Commercial Category: " + commercialCategory;
+    }
 
 }
