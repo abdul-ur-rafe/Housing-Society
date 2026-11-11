@@ -35,6 +35,10 @@ public abstract class Plot{
 	public void updateStatus(PlotStatus status){
 		this.status = status;
 	}
+
+	public int getPlotNumber(){
+		return plotNumber;
+	}
 	
 
 
