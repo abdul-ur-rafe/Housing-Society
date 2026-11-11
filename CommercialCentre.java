@@ -1,9 +1,14 @@
-public class Plot{
+public class CommercialCentre extends Plot{
 
-	private int plotNumber;
-	private double area;
-	private double price;
-	private boolean isAvailable;
+	private String centreName;
+	private String location;
+	private int totalFloors;
+
+	public CommercialCentre(){
+
+
+		
+	}
 	
 	public void displayPlotDetails(){
 		
