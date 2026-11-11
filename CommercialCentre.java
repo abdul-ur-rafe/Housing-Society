@@ -4,8 +4,8 @@ public class CommercialCentre extends Plot{
 	private String location;
 	private int totalFloors;
 
-	public CommercialCentre(){
-
+	public CommercialCentre(int plotNumber, double area, double price, String centreName , String location , int totalFloors){
+			super(plotNumber, area, price);
 
 		
 	}
