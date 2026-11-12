@@ -1,42 +1,82 @@
+import java.time.Localdate;
+import java.util.arrayList;
+import java.util.List;
+import java.util.Objects;
+
+
 public class HousingSociety{
 	private int societyId;
 	private String societyName;
 	private String location;
 	private double totalArea;
-	private Block blocks [];
-	private int count;
+	private LocalDate establishmentDate;
+	private final List<Block> blocks;
 
-public HousingSociety(int societyId, String societyName, String location , double totalArea){
+public HousingSociety(int societyId, String societyName, String location , double totalArea,Localdate establishmentDate){
 	this.societyId = societyId;
-	this.societyName = societyame;
-	this.location = location;
+	this.societyName = Objects.requireNonNull(societyName, "Society Name cannot be null");
+	this.location = Objects.requireNonNull(location, "Location cannot be null");
 	this.totalArea = totalArea;
+	this.estalishmentDate = Objects.requireNonNull(establishmentdate, "Establishment date cannot be null");
+	this.blocks = new ArrayList<>();
 }
 
 public void addBlock(Block block){
-		blocks[count++] = block;
+		if (block == null){
+			throw new IllegalArgumentException("Added block Cannot be Null");
+			}
+		if (!blocks.contains(block)){
+				blocks.add(block);
+		}
+
 }
 
 public void removeBlock(Block block){
-	for(int i =0; i<=count; i++)
-		if (block[i]==block){
-		block[i]= null;
+	blocks.remove(block);
 }
 
+public Block findBlock(string name){
+	if(name == null || name.isBlank()){
+		return null;
+	}
+	for(Block block : blocks){
+		if(block.getBlockName()){
+			return block;
+		}
+	}
+
+	
+}
+
+	
 }
 
 public void displaySocietyDetails(){
-	System.out.println("Society Id: " + societyId);
-	System.out.println("Society Name: " + societyName);
-	System.out.println("Location: " + location);
-	System.out.println("Total Area: " + totalArea);
-
+	System.out.println("   Housing Society  ");
+	System.out.println("ID: "+ societyId + " | Name: "+ societyName);
+	System.out.println("Location: "+ location + " | Total Area: "+ totalArea);
+    System.out.println("Established: "+ establishmentDate + " | Total Blocks: "+ blocks.size());
+	for (Block block : blocks){
+			block.displaySocietyDetails();
+	}
 }
 
-
-
-
-
-
-
+public int getsocietyId(){ 
+	return societyId; 
+}
+public String getSocietyName(){
+	return societyName;
+}
+public String getLocation(){
+	return location;
+}
+public double getTotalArea() {
+	return totalArea;
+}
+public LocalDate getEstablishmentDate(){
+	 return establishmentDate;
+}
+public List<Block> getBlocks(){
+	return blocks;
+}
 }
