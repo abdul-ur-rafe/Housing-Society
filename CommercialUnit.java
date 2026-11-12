@@ -14,7 +14,7 @@ this.area=area;
 this.rent=rent;
 this.isAvailable=isAvailable;
 }	
-	
+public int getshopId(){return shopId;}	
 public void rentUnit(){
 
 	if(isAvailable){

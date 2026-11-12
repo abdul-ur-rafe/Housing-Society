@@ -7,7 +7,7 @@ public class CommercialCentre extends Plot{
 	private CommercialUnit shops [] = new CommercialUnit [20];
 	private int count;
 
-	public CommercialCentre(int plotNumber, int plotId, double area, double price, Plotshape shape, Owner owner, PlotStatus status, int centreId, String centreName , String description , int totalFloors){
+	public CommercialCentre(int plotNumber, int plotId, double area, double price, PlotShape shape, Owner owner, PlotStatus status, int centreId, String centreName , String description , int totalFloors){
 			super(plotNumber, plotId, area, price, shape, owner, status);
 			this.centreName = centreName;
 			this.centreId = centreId;		
@@ -23,14 +23,14 @@ public class CommercialCentre extends Plot{
 
 	public void removeShop(int shopId){
 		for(int i=0 ; i<count ; i++){
-				if(shops[i].shopId == shopId){
-					shop[i] = null;	
+				if(shops[i].getshopId() == shopId){
+					shops[i] = null;	
 				}
 		}
 	}
 
 	public void displayCentreDetails(){
-		super().getPlotDetails();
+		super.getPlotDetails();
 		System.out.println("Centre ID: " + centreId);
 		System.out.println("Centre Name: " + centreName);
 		System.out.println("Total FLoors: " + totalFloors);

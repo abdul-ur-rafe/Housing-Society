@@ -8,7 +8,7 @@ public abstract class Plot{
 	private PlotShape shape;
 	private Owner owner;
 
-	public Plot(int plotNumber, int plotId, double area, double price, Plotshape shape, Owner owner, PlotStatus status){
+	public Plot(int plotNumber, int plotId, double area, double price, PlotShape shape, Owner owner, PlotStatus status){
 		this.plotNumber = plotNumber;
 		this.plotId = plotId;
 		this.area = area;

@@ -1,5 +1,5 @@
-import java.time.Localdate;
-import java.util.arrayList;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public class HousingSociety{
 	private LocalDate establishmentDate;
 	private final List<Block> blocks;
 
-public HousingSociety(int societyId, String societyName, String location , double totalArea,Localdate establishmentDate){
+public HousingSociety(int societyId, String societyName, String location , double totalArea,LocalDate establishmentDate){
 	this.societyId = societyId;
 	this.societyName = Objects.requireNonNull(societyName, "Society Name cannot be null");
 	this.location = Objects.requireNonNull(location, "Location cannot be null");
@@ -35,7 +35,7 @@ public void removeBlock(Block block){
 	blocks.remove(block);
 }
 
-public Block findBlock(string name){
+public Block findBlock(String name){
 	if(name == null || name.isBlank()){
 		return null;
 	}
@@ -49,7 +49,7 @@ public Block findBlock(string name){
 }
 
 	
-}
+
 
 public void displaySocietyDetails(){
 	System.out.println("   Housing Society  ");
