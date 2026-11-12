@@ -4,19 +4,19 @@ public class CommercialPlot extends Plot{
 
 
 
-	public CommercialPlot(int plot,double area ,double price, String commercialCategory,String businessType){
+	public CommercialPlot(int plot,double area ,double price, String commercialCategory,BusinessType businessType){
 		super(plot ,area , price);
 		this.businessType=businessType;
 		this.commercialCategory=commercialCategory;
 		}
-    public String getBusinessType() {
+    public BusinessType getBusinessType() {
         return businessType;
     }
     public String getCommercialCategory() {
         return commercialCategory;
     }
 
-    public void setBusinessType(String businessType) {
+    public void setBusinessType(BusinessType businessType) {
         this.businessType = businessType;
     }
 
