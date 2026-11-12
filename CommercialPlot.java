@@ -3,9 +3,9 @@ public class CommercialPlot extends Plot{
 	private String commercialCategory;
 
 
+public CommercialPlot(int plotNumber, int plotId, double area,double price, PlotShape shape, Owner owner,PlotStatus status, String commercialCategory,BusinessType businessType){
 
-	public CommercialPlot(int plot,double area ,double price, String commercialCategory,BusinessType businessType){
-		super(plot ,area , price);
+    		super(plotNumber, plotId, area, price, shape, owner, status);
 		this.businessType=businessType;
 		this.commercialCategory=commercialCategory;
 		}

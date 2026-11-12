@@ -1,6 +1,6 @@
 public class Block{
 
-private int blockId;
+private String blockId;
 private String blockName;
 private int blockNumber;	
 private Plot plots[];
@@ -19,9 +19,9 @@ public void addPlot(Plot plot){
 
 
 public void removePLot(Plot plot){
-for(int i =0; i<count; i++)
-		if (plot[i]==plot){
-		plot[i]= null;
+	for(int i =0; i<count; i++)
+		if (plots[i]==plot){
+			plots[i]= null;
 	}
 
 }
@@ -30,14 +30,14 @@ public Plot searchPlot(int number){
 	return plots[number];
 }	
 
-public void displayDetails(){
+public void displaySocietyDetails(){
 	System.out.println("Block Id: " + blockId);
 	System.out.println("Block Name: " + blockName);
 	System.out.println("Block Number: " + blockNumber);
 }
 
 
-
+public String getBlockName(){return blockName;}
 
 
 }
